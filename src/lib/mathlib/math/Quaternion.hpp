@@ -195,12 +195,12 @@ public:
 	 * set quaternion to rotation defined by euler angles
 	 */
 	void from_euler(float roll, float pitch, float yaw) {
-		double cosPhi_2 = cos(double(roll) / 2.0);
-		double sinPhi_2 = sin(double(roll) / 2.0);
-		double cosTheta_2 = cos(double(pitch) / 2.0);
-		double sinTheta_2 = sin(double(pitch) / 2.0);
-		double cosPsi_2 = cos(double(yaw) / 2.0);
-		double sinPsi_2 = sin(double(yaw) / 2.0);
+		double cosPhi_2 = cos(double(roll) / double(2.0));
+		double sinPhi_2 = sin(double(roll) / double(2.0));
+		double cosTheta_2 = cos(double(pitch) / double(2.0));
+		double sinTheta_2 = sin(double(pitch) / double(2.0));
+		double cosPsi_2 = cos(double(yaw) / double(2.0));
+		double sinPsi_2 = sin(double(yaw) / double(2.0));
 
 		/* operations executed in double to avoid loss of precision through
 		 * consecutive multiplications. Result stored as float.

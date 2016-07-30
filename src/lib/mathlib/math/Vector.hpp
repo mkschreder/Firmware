@@ -80,7 +80,7 @@ public:
 		data{},
 		arm_col{N, 1, &data[0]}
 	{
-
+		zero(); 
 	}
 
 	virtual ~VectorBase() {};
